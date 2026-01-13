@@ -6,17 +6,17 @@ This repository contains Python scripts for verifying and reproducing the mathem
 
 The Alternating Power Difference (APD) is a novel matrix invariant defined through the symmetric group $S_n$. This toolkit provides two primary scripts to validate the theoretical findings:
 
-1. **Fundamental Verification (`verify_apd.py`)**: Validates the initial invariant $\operatorname{APD}_{n-1}(L_n) = (n-1)!$.
+1. **Fundamental Verification (`verify_apd.py`)**: Validates the initial invariant $\mathrm{APD}_{n-1}(L_n) = (n-1)!$.
 2. **Table Reproduction (`reproduce_table.py`)**: Generates an extended LaTeX table for higher-order APD values, demonstrating the connection to **Stirling numbers of the second kind**.
 
 ## Mathematical Definition
 
 For an $n \times n$ matrix $A$, the $m$-th order APD is defined as:
-$$\operatorname{APD}_m(A) = \sum_{\sigma \in S_n} \operatorname{sgn}(\sigma) \left( \sum_{i=0}^{n-1} A_{i, \sigma(i)} \right)^m$$
+$$\mathrm{APD}_m(A) = \sum_{\sigma \in S_n} \mathrm{sgn}(\sigma) \left( \sum_{i=0}^{n-1} A_{i, \sigma(i)} \right)^m$$
 
 ### Key Discovery: The Stirling Connection
 Our research identifies that for triangular Pascal matrices $L_n$ and $U_n$, the APD values follow a pure closed-form:
-$$\operatorname{APD}_{n+k-2}(L_n) = (n-1)! \times \begin{Bmatrix} n+k-1 \\ n \end{Bmatrix}$$
+$$\mathrm{APD}_{n+k-2}(L_n) = (n-1)! \times \begin{Bmatrix} n+k-1 \\ n \end{Bmatrix}$$
 where $\begin{Bmatrix} n \\ k \end{Bmatrix}$ denotes Stirling numbers of the second kind.
 
 ## Prerequisites
